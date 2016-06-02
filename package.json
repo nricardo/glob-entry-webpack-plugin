@@ -1,0 +1,34 @@
+{
+  "name": "glob-entry-webpack-plugin",
+  "version": "0.1.0",
+  "description": "A webpack plugin that adds entry chunks based on matched glob patterns.",
+  "main": "dist/GlobEntryPlugin.js",
+  "scripts": {
+    "prebuild": "npm install",
+    "build": "webpack --progress --colors --display-modules"
+  },
+  "author": "Nelson Ricardo <nelson.s.ricardo@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nricardo/glob-entry-webpack-plugin.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^5.8.25",
+    "babel-loader": "^5.3.2",
+    "glob": "^7.0.3",
+    "ng-annotate-loader": "^0.1.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.0"
+  },
+  "bugs": {
+    "url": "https://github.com/nricardo/glob-entry-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/nricardo/glob-entry-webpack-plugin#readme",
+  "keywords": [
+    "webpack",
+    "glob",
+    "chunks",
+    "build"
+  ]
+}

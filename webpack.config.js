@@ -16,12 +16,23 @@ module.exports = {
 	// output definition
 	output: {
 		filename: '[name].js',
-		path: path.join(__dirname, 'dist'),
-
-		// tell webpack to create a UMD library
-		library: 'GlobEntryPlugin',
-		libraryTarget: 'umd'
+    library: 'GlobEntryPlugin',
+    libraryTarget: 'commonjs2',
+		path: path.join(__dirname, 'dist')
 	},
+
+  // this module/lib is to be executed
+  // in a node.js environment
+  target: 'node',
+
+  // tell webpack not to include
+  // this modules into be bundle
+  // (they are external dependencies)
+  externals: {
+    'glob': true,
+    'webpack/lib/MultiEntryPlugin': true,
+    'webpack/lib/SingleEntryPlugin': true
+  },
 
 	// setup plugins
 	plugins: [
